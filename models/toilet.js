@@ -1,8 +1,10 @@
 // Modelでもmongooseを読み込みます
 var mongoose = require('mongoose');
 
+
+var mongoURI = process.env.MONGODB_URI
 // MongoDBに接続
-var mURI = 'mongodb://localhost:27017/toilet';
+var mURI = 'mongodb://'+ mongoURI + '/toilet';
 mongoose.connect(mURI);
 
 const db = mongoose.connection;
