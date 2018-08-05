@@ -3,6 +3,7 @@ var mongoose = require('mongoose');
 
 // MongoDBに接続
 var mURI = process.env.MONGOLAB_URI || 'mongodb://localhost/toilet';
+console.log(mURI);
 mongoose.connect(mURI);
 
 const db = mongoose.connection;
