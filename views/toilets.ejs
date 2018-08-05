@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  </head>
+  <body>
+  <h1><%= title %></h1>
+  <table>
+      <thead>
+      <tr>
+          <th>トイレの名前</th>
+      </tr>
+      </thead>
+      <tbody>
+       <% toilets.forEach(function(toilet) { %>
+       <tr>
+        <td><a href="/toilets/<%= toilet._id%>"><%= toilet.name %></a></td>
+       </tr>
+            <% }); %>
+      </tbody>
+  </table>
+  </body>
+</html>
